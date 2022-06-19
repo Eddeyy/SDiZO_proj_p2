@@ -13,7 +13,7 @@ class IncidenceMatrix : public Graph
     uint64_t usedEdges = 0;
 
     int64_t **matrix;
-    uint64_t * eVals;
+    int64_t * eVals;
 
 public:
 
@@ -22,12 +22,12 @@ public:
 
     ~IncidenceMatrix();
 
-    void add(const uint64_t& src, const uint64_t& dest, const uint64_t &cost);
+    void add(const uint64_t& src, const uint64_t& dest, const int64_t &cost);
 
     void print() override;
 
     int64_t ** getMatrix();
-    uint64_t* getEVals();
+    int64_t* getEVals();
 
 };
 

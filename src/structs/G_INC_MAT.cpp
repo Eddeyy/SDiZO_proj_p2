@@ -6,6 +6,8 @@
 IncidenceMatrix::IncidenceMatrix(const uint64_t& nNodes, const uint64_t& nEdges)
         :   Graph(nNodes, nEdges)
 {
+    eVals = new int64_t[nEdges];
+
     this->matrix = new int64_t *[nNodes];
 
     for(size_t i = 0; i < nNodes; i++)
@@ -22,8 +24,6 @@ IncidenceMatrix::IncidenceMatrix(const uint64_t& nNodes, const uint64_t& nEdges)
 IncidenceMatrix::IncidenceMatrix(const uint64_t& nNodes, const uint64_t& nEdges, const int64_t *data)
 : IncidenceMatrix(nNodes, nEdges)
 {
-       eVals = new uint64_t[nEdges];
-
        for(size_t i = 0, dat_i = 0, eVal_i = 0 ;
             i < nEdges ;
             i++, eVal_i++, dat_i++)
@@ -53,7 +53,7 @@ IncidenceMatrix::~IncidenceMatrix()
     }
 }
 
-void IncidenceMatrix::add(const uint64_t &src, const uint64_t &dest, const uint64_t &cost)
+void IncidenceMatrix::add(const uint64_t &src, const uint64_t &dest, const int64_t &cost)
 {
     this->matrix[src][this->usedEdges] = -1;
     this->matrix[dest][this->usedEdges] = 1;
@@ -99,7 +99,7 @@ int64_t **IncidenceMatrix::getMatrix()
     return this->matrix;
 }
 
-uint64_t *IncidenceMatrix::getEVals()
+int64_t *IncidenceMatrix::getEVals()
 {
     return this->eVals;
 }

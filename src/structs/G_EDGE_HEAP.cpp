@@ -21,9 +21,9 @@ Heap::~Heap()
     this->size = 0;
 }
 
-void Heap::heapify(int i)
+void Heap::heapify(size_t i)
 {
-    int min {i}, left {2*i + 1}, right {2*i + 2};
+    size_t min {i}, left {2*i + 1}, right {2*i + 2};
 
     if(left < this->size && tab[left]->cost < tab[min]->cost)
         min = left;
@@ -119,6 +119,6 @@ void Heap::buildHeap()
 {
     size_t startIndex {(this->size / 2) - 1};
 
-    for(size_t i = startIndex; i >= 0; i--)
+    for(size_t i = startIndex; i >= 0 && i < size; i--)
         heapify(i);
 }

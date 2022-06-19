@@ -13,4 +13,9 @@
 #include "structs/G_INC_MAT.h"
 #include "structs/G_EDGE_HEAP.h"
 
+#include "algs/A_MST_PRIM.h"
+#include "algs/A_MST_KRUSKAL.h"
+#include "algs/A_SP_BELFOR.h"
+#include "algs/A_SP_DIJKSTRA.h"
+
 #endif //SDIZO_PROJ_P2_SDIZO_PROJ_HPP

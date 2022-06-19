@@ -8,13 +8,13 @@ int main()
                       2, 0, 5,
                       0, 2, 13};
 
-    IncidenceMatrix list(3,4, data);
-
-
-    list.add(2,1,2);
+    AdjacencyList list(3,4, data);
 
     list.print();
 
+    std::cout << "\n";
+
+    Prim::genMST(&list, 0)->print();
 
     return 0;
 }

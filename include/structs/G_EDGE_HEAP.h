@@ -12,7 +12,7 @@ class Heap {
     Edge** tab;
     size_t size;
 
-    void heapify(int i);
+    void heapify(size_t i);
 
 public:
     Heap();
