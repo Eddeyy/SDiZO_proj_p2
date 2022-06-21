@@ -13,11 +13,11 @@
 class Dijkstra
 {
 private:
-    static bool isEmpty(bool *tab, const size_t& size);
-    static int getMin(size_t *table, bool* visited, bool* toRelax, const size_t& size);
+    static bool isEmpty(const bool *tab, const size_t& size);
+    static int getMin(int64_t *table, bool* visited, bool* toRelax, const size_t& size);
 public:
-    static Path* getSP(IncidenceMatrix* graph, const uint64_t& start);
-    static Path* getSP(AdjacencyList* graph, const uint64_t& start);
+    static Path* getSP(IncidenceMatrix* graph, const int64_t& start, const int64_t& finish);
+    static Path* getSP(AdjacencyList* graph, const int64_t& start, const int64_t& finish);
 };
 
 #endif //SDIZO_PROJ_P2_A_SP_DIJKSTRA_H

@@ -7,7 +7,7 @@
 #include "../structs/G_INC_MAT.h"
 #include "../structs/G_ADJ_LIST.h"
 
-class Kurskal
+class Kruskal
 {
 private:
     static bool isEmpty(bool* tab, const size_t& size);

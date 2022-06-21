@@ -8,13 +8,13 @@
 
 struct Edge
 {
-    Edge(const uint64_t& _src, const uint64_t & _dest, const int64_t& _cost)
+    Edge(const int64_t& _src, const int64_t & _dest, const int64_t& _cost)
         : src{_src}, dest{_dest}, cost{_cost}, next{nullptr}
     {};
 
     int64_t cost;
-    uint64_t src;
-    uint64_t dest;
+    int64_t src;
+    int64_t dest;
 
     Edge * next;
 };

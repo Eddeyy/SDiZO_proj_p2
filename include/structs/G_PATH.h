@@ -10,8 +10,8 @@ class Path
 {
 private:
 
-    uint64_t * nodes;
-    uint64_t * costs;
+    int64_t * nodes;
+    int64_t * costs;
 
     int64_t cost;
 

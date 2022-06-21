@@ -18,27 +18,27 @@ Path::~Path()
     this->size = 0;
 }
 
-void Path::add(const int64_t &node, const int64_t &cost)
+void Path::add(const int64_t &node, const int64_t &e_cost)
 {
-    this->cost += cost;
+    this->cost += e_cost;
 
     if(this->size == 0)
     {
-        this->nodes = new uint64_t;
+        this->nodes = new int64_t;
         this->nodes[0] = node;
 
-        this->costs = new uint64_t;
-        this->costs[0] = cost;
+        this->costs = new int64_t;
+        this->costs[0] = e_cost;
     }
     else
     {
-        auto tNodes = new uint64_t[this->size + 1];
-        auto tCosts = new uint64_t[this->size + 1];
+        auto tNodes = new int64_t[this->size + 1];
+        auto tCosts = new int64_t[this->size + 1];
 
         tNodes[0] = node;
-        tCosts[0] = cost;
+        tCosts[0] = e_cost;
 
-        for (size_t i = 0; i < this->size + 1; i++)
+        for (size_t i = 1; i < this->size + 1; i++)
         {
             tNodes[i] = nodes[i - 1];
             tCosts[i] = costs[i - 1];

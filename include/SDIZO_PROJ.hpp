@@ -18,4 +18,11 @@
 #include "algs/A_SP_BELFOR.h"
 #include "algs/A_SP_DIJKSTRA.h"
 
+#include "util/U_FILE_MAN.h"
+#include "util/U_GRAPHGEN.h"
+#include "util/T_TESTER.h"
+#include "util/T_TIMER.h"
+
+#include "APPLICATION.hpp"
+
 #endif //SDIZO_PROJ_P2_SDIZO_PROJ_HPP

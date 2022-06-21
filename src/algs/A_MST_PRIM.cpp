@@ -99,6 +99,8 @@ AdjacencyList* Prim::genMST(AdjacencyList *list, const uint64_t &start)
     delete[] visitedNodes;
     delete heap;
 
+    std::cout << "\n Minimal spanning tree cost (list) is : " << totalCost << std::endl;
+
     return listToReturn;
 }
 
@@ -203,6 +205,8 @@ IncidenceMatrix* Prim::genMST(IncidenceMatrix *mat, const uint64_t &start)
             }
         }
     }
+
+    std::cout << "\n Minimal spanning tree (matrix) cost is : " << totalCost << std::endl;
 
     return resultMatrix;
 }
